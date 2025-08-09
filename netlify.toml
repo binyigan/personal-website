@@ -1,0 +1,47 @@
+[build]
+  command = "npm run build"
+  publish = "frontend"
+  
+[build.environment]
+  NODE_VERSION = "18"
+
+# API路由重定向（如果使用Netlify Functions）
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA路由重定向
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 表单处理
+[[forms]]
+  name = "contact"
+
+# 头部设置
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 缓存设置
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
