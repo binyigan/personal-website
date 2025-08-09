@@ -23,48 +23,30 @@
 ### 后端
 - Node.js
 - Express.js
-- 静态文件服务
+- Nodemailer (邮件服务)
+- Vercel Serverless Functions
 
 ## 📁 项目结构
 
 ```
-<<<<<<< HEAD
-校园预约管理系统/
-=======
 个人网站/
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
-├── backend/
-│   ├── package.json
-│   ├── package-lock.json
-│   └── server.js
-├── frontend/
+├── api/
+│   ├── contact.js
+│   ├── projects.js
+│   └── skills.js
+├── public/
 │   ├── index.html
 │   ├── styles.css
 │   └── script.js
-<<<<<<< HEAD
-=======
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml
-├── DEPLOYMENT_GUIDE.md
-├── QUICK_START.md
 ├── package.json
 ├── vercel.json
-├── netlify.toml
-├── Dockerfile
-├── docker-compose.yml
-├── nginx.conf
-├── deploy.js
-├── check-deployment.js
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 └── README.md
 ```
 
 ## 🚀 快速开始
 
-<<<<<<< HEAD
-### 1. 安装依赖
-=======
 ### 1. 克隆项目
 
 ```bash
@@ -73,18 +55,12 @@ cd personal-website
 ```
 
 ### 2. 安装依赖
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 
 ```bash
-cd backend
 npm install
 ```
 
-<<<<<<< HEAD
-### 2. 启动开发服务器
-=======
 ### 3. 启动开发服务器
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 
 ```bash
 npm run dev
@@ -96,12 +72,6 @@ npm run dev
 npm start
 ```
 
-<<<<<<< HEAD
-### 3. 访问网站
-
-打开浏览器访问：`http://localhost:3000`
-
-=======
 ### 4. 访问网站
 
 打开浏览器访问：`http://localhost:3000`
@@ -125,9 +95,6 @@ npm run deploy:vercel
 - **GitHub Pages** ⭐⭐⭐ - 完全免费，适合静态站点
 - **Docker** ⭐⭐ - 容器化部署，适合云服务器
 
-详细部署指南请查看 [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
-
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 ## 📱 页面结构
 
 ### 主页 (Hero Section)
@@ -155,31 +122,21 @@ npm run deploy:vercel
 
 ### 修改个人信息
 
-1. **基本信息**：编辑 `frontend/index.html` 中的以下内容：
+1. **基本信息**：编辑 `public/index.html` 中的以下内容：
    - 姓名和职业
    - 个人描述
    - 联系信息
 
-2. **项目信息**：在 `backend/server.js` 的 `/api/projects` 路由中修改项目数据
+2. **项目信息**：在 `api/projects.js` 中修改项目数据
 
-3. **技能信息**：在 `backend/server.js` 的 `/api/skills` 路由中修改技能数据
+3. **技能信息**：在 `api/skills.js` 中修改技能数据
 
 ### 修改样式
 
-- **颜色主题**：编辑 `frontend/styles.css` 中的颜色变量
+- **颜色主题**：编辑 `public/styles.css` 中的颜色变量
 - **字体**：修改 CSS 中的 `font-family` 属性
 - **布局**：调整 Grid 和 Flexbox 布局
 
-<<<<<<< HEAD
-### 添加新功能
-
-- **博客功能**：可以添加博客页面和文章管理
-- **后台管理**：添加内容管理系统
-- **数据库集成**：连接 MongoDB 或 MySQL
-- **邮件服务**：集成 Nodemailer 发送邮件
-
-=======
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 ## 📋 API 接口
 
 ### GET /api/projects
@@ -201,30 +158,6 @@ npm run deploy:vercel
 }
 ```
 
-<<<<<<< HEAD
-## 🔧 部署
-
-### Vercel 部署
-
-1. 安装 Vercel CLI：
-```bash
-npm i -g vercel
-```
-
-2. 在项目根目录运行：
-```bash
-vercel
-```
-
-### 传统服务器部署
-
-1. 将项目文件上传到服务器
-2. 安装 Node.js 和 npm
-3. 安装依赖：`npm install`
-4. 启动服务：`npm start`
-5. 配置反向代理（Nginx）
-
-=======
 ## 🔧 可用脚本
 
 ```bash
@@ -243,7 +176,6 @@ npm run docker:run       # 运行 Docker 容器
 npm run docker:compose   # 使用 Docker Compose
 ```
 
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 ## 🌐 浏览器支持
 
 - Chrome (推荐)
@@ -274,12 +206,7 @@ MIT License
 如果您有任何问题或建议，请通过以下方式联系：
 
 - 邮箱：example@email.com
-<<<<<<< HEAD
-- GitHub：[您的GitHub用户名]
-- 微信：[您的微信号]
-=======
 - GitHub：[binyigan](https://github.com/binyigan)
->>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 
 ---
 
