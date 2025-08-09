@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">我的网站</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">关于我</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">项目</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">联系</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页部分 -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">你好，我是 <span class="highlight">张三</span></h1>
+                <p class="hero-subtitle">全栈开发者 & 创意设计师</p>
+                <p class="hero-description">
+                    热爱编程，专注于创建优雅的用户体验和高效的解决方案。
+                    擅长前端开发、后端架构设计和用户界面设计。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">查看作品</a>
+                    <a href="#contact" class="btn btn-secondary">联系我</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我部分 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>我的故事</h3>
+                    <p>
+                        我是一名充满激情的全栈开发者，拥有3年的开发经验。
+                        专注于使用现代技术栈创建高质量的Web应用程序。
+                    </p>
+                    <p>
+                        我相信技术应该为人们的生活带来便利，因此我致力于
+                        开发用户友好且功能强大的应用程序。
+                    </p>
+                </div>
+                <div class="skills">
+                    <h3>技能专长</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>数据库</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目部分 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">我的项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>校园预约管理系统</h3>
+                        <p>一个功能完整的校园设施预约管理系统，支持在线预约、管理和查询。</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">查看详情</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>电商平台</h3>
+                        <p>现代化的电商平台，包含商品展示、购物车、支付等完整功能。</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">查看详情</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>个人博客系统</h3>
+                        <p>响应式个人博客，支持文章发布、分类管理和评论功能。</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">查看详情</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系部分 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>让我们一起合作</h3>
+                    <p>如果您有任何项目想法或合作机会，欢迎随时联系我。</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>example@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+86 138 0000 0000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>中国，北京</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="主题" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="您的消息" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 我的个人网站. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
