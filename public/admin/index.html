@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>后台管理 - 联系信息</title>
+    <style>
+        .contact-item {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .unread { background-color: #f0f8ff; }
+        .read { background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>联系信息管理</h1>
+    <div id="contacts-list"></div>
+    
+    <script>
+        // 获取并显示联系信息
+        async function loadContacts() {
+            try {
+                const response = await fetch('/api/admin/contacts', {
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.getItem('adminToken')
+                    }
+                });
+                const data = await response.json();
+                displayContacts(data.contacts);
+            } catch (error) {
+                console.error('加载失败:', error);
+            }
+        }
+        
+        function displayContacts(contacts) {
+            const container = document.getElementById('contacts-list');
+            container.innerHTML = contacts.map(contact => `
+                <div class="contact-item ${contact.status}">
+                    <h3>${contact.subject}</h3>
+                    <p><strong>姓名：</strong>${contact.name}</p>
+                    <p><strong>邮箱：</strong>${contact.email}</p>
+                    <p><strong>消息：</strong>${contact.message}</p>
+                    <p><strong>时间：</strong>${new Date(contact.createdAt).toLocaleString()}</p>
+                    <button onclick="markAsRead('${contact._id}')">标记为已读</button>
+                </div>
+            `).join('');
+        }
+        
+        loadContacts();
+    </script>
+</body>
+</html>
