@@ -1,9 +1,41 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
+=======
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/backend/server.js"
+    },
+    {
+      "src": "/(.*\\.(css|js|html|png|jpg|jpeg|gif|svg|ico))",
+      "dest": "/frontend/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/index.html"
+    }
+  ],
+  "functions": {
+    "backend/server.js": {
+      "maxDuration": 10
+    }
+  }
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 }

@@ -28,7 +28,11 @@
 ## 📁 项目结构
 
 ```
+<<<<<<< HEAD
 校园预约管理系统/
+=======
+个人网站/
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 ├── backend/
 │   ├── package.json
 │   ├── package-lock.json
@@ -37,19 +41,50 @@
 │   ├── index.html
 │   ├── styles.css
 │   └── script.js
+<<<<<<< HEAD
+=======
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── DEPLOYMENT_GUIDE.md
+├── QUICK_START.md
+├── package.json
+├── vercel.json
+├── netlify.toml
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── deploy.js
+├── check-deployment.js
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 └── README.md
 ```
 
 ## 🚀 快速开始
 
+<<<<<<< HEAD
 ### 1. 安装依赖
+=======
+### 1. 克隆项目
+
+```bash
+git clone https://github.com/binyigan/personal-website.git
+cd personal-website
+```
+
+### 2. 安装依赖
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 
 ```bash
 cd backend
 npm install
 ```
 
+<<<<<<< HEAD
 ### 2. 启动开发服务器
+=======
+### 3. 启动开发服务器
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 
 ```bash
 npm run dev
@@ -61,10 +96,38 @@ npm run dev
 npm start
 ```
 
+<<<<<<< HEAD
 ### 3. 访问网站
 
 打开浏览器访问：`http://localhost:3000`
 
+=======
+### 4. 访问网站
+
+打开浏览器访问：`http://localhost:3000`
+
+## 🌐 部署到公网
+
+### 一键部署（推荐）
+
+```bash
+# 使用部署脚本
+npm run deploy
+
+# 或直接部署到 Vercel
+npm run deploy:vercel
+```
+
+### 支持的部署平台
+
+- **Vercel** ⭐⭐⭐⭐⭐ - 最推荐，免费、快速、自动HTTPS
+- **Netlify** ⭐⭐⭐⭐ - 功能丰富，表单处理
+- **GitHub Pages** ⭐⭐⭐ - 完全免费，适合静态站点
+- **Docker** ⭐⭐ - 容器化部署，适合云服务器
+
+详细部署指南请查看 [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 ## 📱 页面结构
 
 ### 主页 (Hero Section)
@@ -107,6 +170,7 @@ npm start
 - **字体**：修改 CSS 中的 `font-family` 属性
 - **布局**：调整 Grid 和 Flexbox 布局
 
+<<<<<<< HEAD
 ### 添加新功能
 
 - **博客功能**：可以添加博客页面和文章管理
@@ -114,6 +178,8 @@ npm start
 - **数据库集成**：连接 MongoDB 或 MySQL
 - **邮件服务**：集成 Nodemailer 发送邮件
 
+=======
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 ## 📋 API 接口
 
 ### GET /api/projects
@@ -135,6 +201,7 @@ npm start
 }
 ```
 
+<<<<<<< HEAD
 ## 🔧 部署
 
 ### Vercel 部署
@@ -157,6 +224,26 @@ vercel
 4. 启动服务：`npm start`
 5. 配置反向代理（Nginx）
 
+=======
+## 🔧 可用脚本
+
+```bash
+# 开发
+npm run dev          # 启动开发服务器
+npm start            # 启动生产服务器
+
+# 部署
+npm run deploy       # 交互式部署脚本
+npm run deploy:vercel    # 部署到 Vercel
+npm run deploy:netlify   # 部署到 Netlify
+
+# Docker
+npm run docker:build     # 构建 Docker 镜像
+npm run docker:run       # 运行 Docker 容器
+npm run docker:compose   # 使用 Docker Compose
+```
+
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 ## 🌐 浏览器支持
 
 - Chrome (推荐)
@@ -187,8 +274,12 @@ MIT License
 如果您有任何问题或建议，请通过以下方式联系：
 
 - 邮箱：example@email.com
+<<<<<<< HEAD
 - GitHub：[您的GitHub用户名]
 - 微信：[您的微信号]
+=======
+- GitHub：[binyigan](https://github.com/binyigan)
+>>>>>>> 74043ad26e94b47cf37f1dd2311f85d0ca9b898b
 
 ---
 
