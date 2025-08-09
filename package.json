@@ -14,7 +14,11 @@
     "deploy:netlify:prod": "netlify deploy --prod",
     "docker:build": "docker build -t personal-website .",
     "docker:run": "docker run -p 3000:3000 personal-website",
-    "docker:compose": "docker-compose up -d"
+    "docker:compose": "docker-compose up -d",
+    "upload:github": "node upload-to-github.js",
+    "git:add": "git add .",
+    "git:commit": "git commit -m",
+    "git:push": "git push origin main"
   },
   "keywords": ["personal", "website", "portfolio"],
   "author": "Your Name",
