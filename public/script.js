@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 联系表单处理
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // 获取表单数据
@@ -76,9 +76,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // 模拟发送邮件（实际项目中需要后端支持）
-            showNotification('消息发送成功！我会尽快回复您。', 'success');
-            contactForm.reset();
+            // 显示发送中状态
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = '发送中...';
+            submitButton.disabled = true;
+
+            try {
+                // 发送到API
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showNotification(result.message || '消息发送成功！我会尽快回复您。', 'success');
+                    contactForm.reset();
+                } else {
+                    showNotification(result.message || '发送失败，请稍后重试。', 'error');
+                }
+            } catch (error) {
+                console.error('发送失败:', error);
+                showNotification('网络错误，请检查网络连接后重试。', 'error');
+            } finally {
+                // 恢复按钮状态
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
         });
     }
 
@@ -135,7 +169,9 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             notification.style.transform = 'translateX(400px)';
             setTimeout(() => {
-                document.body.removeChild(notification);
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
             }, 300);
         }, 3000);
     }
